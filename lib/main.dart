@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return FluentApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(),
+      theme: ThemeData.dark(),
       home: const NavigationScreen(),
     );
   }
