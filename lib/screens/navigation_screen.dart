@@ -1,4 +1,5 @@
 import 'package:finance/screens/consulta_titulo_screen.dart';
+import 'package:finance/screens/consulta_trd_screen.dart';
 import 'package:finance/screens/screen_1.dart';
 import 'package:finance/screens/screen_2.dart';
 import 'package:fluent_ui/fluent_ui.dart';
@@ -30,18 +31,17 @@ class _NavigationScreenState extends State<NavigationScreen> {
           ),
         ),
         items: [
-          PaneItem(icon: const Icon(FluentIcons.apps_content), title: const Text('Títulos')),
           PaneItem(
-            icon: const Icon(FluentIcons.a_a_d_logo),
-            title: const Text('Screen 1'),
+            icon: const Icon(FluentIcons.apps_content),
+            title: const Text('Títulos'),
           ),
           PaneItem(
-            icon: const Icon(FluentIcons.accept),
-            title: const Text('Screen 2'),
+            icon: const Icon(FluentIcons.a_a_d_logo),
+            title: const Text('TRD'),
           ),
         ],
         selected: _currentIndex,
-        displayMode: PaneDisplayMode.compact,
+        displayMode: PaneDisplayMode.auto,
         onChanged: (index) {
           setState(() {
             _currentIndex = index;
@@ -52,8 +52,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
         index: _currentIndex,
         children: const [
           ConsultaTituloScreen(),
-          Screen1(),
-          Screen2(),
+          ConsultaTRDScreen(),
         ],
       ),
     );
